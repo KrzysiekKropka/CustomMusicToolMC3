@@ -5,7 +5,7 @@
 
 # External tools
 
-- rstm_build.py by ednessp
+- rstm_build.py by (ednessp)[https://ednessp.github.io/]
 - hash_build.py by ednessp
 - dave.py by ednessp
 - strtbl.py by ednessp
