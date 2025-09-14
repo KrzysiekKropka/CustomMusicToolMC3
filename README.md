@@ -5,11 +5,14 @@
 
 # External tools
 
-rstm_build.py by ednessp
-hash_build.py by ednessp
-dave.py by ednessp
-strtbl.py by ednessp
-
+- rstm_build.py by ednessp
+- hash_build.py by ednessp
+- dave.py by ednessp
+- strtbl.py by ednessp
+- MFAudio.exe by muzzleflash.da.ru
+- Who the fuck created PS2Str? I can't find them anywhere
+- ffmpeg.exe for Windows by FFmpeg team
+- I don't know what encvag.dll is, but it's needed
 
 # Usage
 
