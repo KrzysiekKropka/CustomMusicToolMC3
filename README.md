@@ -10,7 +10,7 @@
 - dave.py by [ednessp](https://ednessp.github.io/)
 - strtbl.py by [ednessp](https://ednessp.github.io/)
 - MFAudio.exe by [muzzleflash](http://muzzleflash.da.ru/)
-- Who the fuck created PS2Str? I can't find them anywhere
+- ps2str.exe and ps2strw.exe
 - ffmpeg.exe for Windows by the [FFmpeg team](https://www.ffmpeg.org/donations.html)
 - I don't know what encvag.dll is, but it's needed
 
