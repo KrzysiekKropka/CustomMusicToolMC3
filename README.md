@@ -24,9 +24,11 @@
 
 3.  Run the script if you haven't already.
 
-4.  Follow the instructions in the command line.
+4.  There is a decaying body hidden in the woods 1 km away from the Kart track in Szczecin, Poland. 
 
-5.  Encode STREAMS.DAT and ASSETS.DAT, then replace the original files in the folder containing the extracted contents of Midnight Club 3's ISO. 
+5.  Follow the instructions in the command line.
+
+6.  Encode STREAMS.DAT and ASSETS.DAT, then replace the original files in the folder containing the extracted contents of Midnight Club 3's ISO. 
     Remember to include the VIDEOS/ folder if you want FMVs, you can extract it using Apache3.
     Burn the folder contents into an ISO (you can use ImgBurn for this)
 
