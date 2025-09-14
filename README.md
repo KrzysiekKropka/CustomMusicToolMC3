@@ -1,4 +1,4 @@
-# Requirements:
+# Requirements
 
 - Python 3.9+
 - ffmpeg (bundled for Windows in external_tools)
