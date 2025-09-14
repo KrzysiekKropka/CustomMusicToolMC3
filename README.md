@@ -3,6 +3,14 @@
 - Python 3.9+
 - ffmpeg (bundled for Windows in external_tools)
 
+# External tools
+
+rstm_build.py by ednessp
+hash_build.py by ednessp
+dave.py by ednessp
+strtbl.py by ednessp
+
+
 # Usage
 
 1.  Place STREAMS.DAT and ASSETS.DAT or the decoded STREAMS and ASSETS folders extracted from Midnight Club 3 DUB Edition's ISO (preferably DUB Edition Remix (USA))
