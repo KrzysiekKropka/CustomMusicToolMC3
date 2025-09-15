@@ -9,6 +9,7 @@ TOOLS_FOLDER = os.path.join(BASE_FOLDER, "external_tools")
 MUSIC_FOLDER = os.path.join(BASE_FOLDER, "STREAMS", "Music")
 PLAY_FOLDER = os.path.join(BASE_FOLDER, "ASSETS", "tune", "audio", "playlist", "city", "sd", "music")
 STRTBL_FOLDER = os.path.join(BASE_FOLDER, "ASSETS", "fonts")
+
 SD_PLAY_FILE = os.path.join(PLAY_FOLDER, "sd.play")
 STRTBL2_FILE = os.path.join(STRTBL_FOLDER, "mcstrings02.strtbl")
 STRTBL2_JSON = os.path.join(STRTBL_FOLDER, "mcstrings02.json")
@@ -61,33 +62,38 @@ def convert_strtbl_to_json():
         print(f"{YELLOW}Converting mcstrings02.strtbl → mcstrings02.json{RESET}")
         subprocess.run(["python", os.path.join(TOOLS_FOLDER, "strtbl.py"), "dec", STRTBL2_FILE], check=True)
         os.remove(STRTBL2_FILE)
+
     if os.path.exists(STRTBL8_FILE) and not os.path.exists(STRTBL8_JSON):
         print(f"{YELLOW}Converting mcstrings08.strtbl → mcstrings08.json{RESET}")
         subprocess.run(["python", os.path.join(TOOLS_FOLDER, "strtbl.py"), "dec", STRTBL8_FILE], check=True)
         os.remove(STRTBL8_FILE)
 
 
-# === 3. Load existing JSON (songs text entries) ===
+# === 3. Load existing JSON (songs text entries) <- no the fuck they ain't just that but okay ===
 def load_song_dicts():
-    song_dict2 = {}
-    song_dict8 = {}
+    song_dict2, song_dict8 = {}
+
     if os.path.exists(STRTBL2_JSON):
         with open(STRTBL2_JSON, "r", encoding="utf-8") as f:
             song_dict2 = json.load(f)
+
     if os.path.exists(STRTBL8_JSON):
         with open(STRTBL8_JSON, "r", encoding="utf-8") as f:
             song_dict8 = json.load(f)
+
     return song_dict2, song_dict8
 
-# === Helper for 4 and 5
-def name_splitting(name):
+# === A name splitting helper function, also takes (feat.) from song titles and adds it to artist ===
+def name_splitting(name, toAppend = True):
     artist, song = name.split(' - ', 1)
 
     feat_match = re.search(r"\((feat\.|ft\.)\s*([^)]+)\)", song, flags=re.IGNORECASE)
+
     if feat_match:
-        featured = feat_match.group(2).strip()
         # Append feat. to artist name
-        artist = f"{artist} feat. {featured}"
+        if toAppend:
+            featured = feat_match.group(2).strip()
+            artist = f"{artist} feat. {featured}"
         # Remove the (feat. ...) from the song title
         song = re.sub(r"\((feat\.|ft\.)\s*[^)]+\)", "", song, flags=re.IGNORECASE).strip()
 
@@ -97,6 +103,7 @@ def name_splitting(name):
 def list_new_songs():
     number = 0
     print("")
+
     for genre in os.listdir(MUSIC_FOLDER):
         genre_path = os.path.join(MUSIC_FOLDER, genre)
         if not os.path.isdir(genre_path):
@@ -110,20 +117,20 @@ def list_new_songs():
             name, ext = os.path.splitext(filename)
             if ' - ' in name:
                 print(f"{GREEN}Found a song in {genre}: {filename}", end=". ")
-                number+=1
-                artist, song = name_splitting(name)
+                artist, song = name_splitting(name, True)
+                print(f"{RESET}Will be {song} by {artist}")
+                number += 1
             else:
                 continue
 
-            print(f"{RESET}Will be {song} by {artist}")
     return(number)
 
 # === 5. Process songs in STREAMS/Music ===
 def process_music_files(song_dict2, song_dict8):
-    new_sdplay_songs = []
-    genre_songs = {}
-
+    new_sdplay_songs = [] # "music\\HipHop\\Artist1_Song1", "music\\Rock\\Artist2_Song2", etc.
+    genre_songs = {} # "Rock": ["music\\Rock\\Artist2_Song2", "music\\Rock\\Artist3_Song3"], "HipHop": [music\\HipHop\\Artist1_Song1, music\\HipHop\\Artist4_Song4]
     existing_sdplay_songs = set()
+
     if os.path.exists(SD_PLAY_FILE):
         with open(SD_PLAY_FILE, "r", encoding="utf-8") as f:
             for line in f:
@@ -144,20 +151,22 @@ def process_music_files(song_dict2, song_dict8):
             if ' - ' not in name:
                 continue
 
-            artist, song = name_splitting(name)
+            artist, song = name_splitting(name, True)
 
-            # Clean file-safe names
+            # Names with no spaces
             artist_nospace = re.sub(r"[^\w]", "", artist) 
             song_nospace = re.sub(r"[^\w]", "", song)
             
             json_key = f"music_{genre}_{artist_nospace}_{song_nospace}"
 
-            # Decide which JSON to use
+            # For some dumb fucking reason, instrumentals use mcstrings08 instead of 02 like other songs
             target_dict = song_dict8 if genre.lower() == "instrumental" else song_dict2
 
+            # ChatGPT is a pussy
             if "data" not in target_dict:
                 target_dict["data"] = {}
 
+            # Adds that song to either mcstrings02 or 08
             if json_key not in target_dict["data"]:
                 target_dict["data"][json_key] = {}
                 for lang, text_prefix in zip(LANGUAGES, LANGUAGE_TEXTS):
@@ -166,6 +175,7 @@ def process_music_files(song_dict2, song_dict8):
                         "font": FONT_TEMPLATE
                     }
 
+            # Playlist format of songs, for some reason they use backslashes
             sdplay_song = f"music\\{genre}\\{artist_nospace}_{song_nospace}"
 
             # Only add to sd.play if NOT instrumental
@@ -202,6 +212,7 @@ def update_playlists(new_sdplay_songs, genre_songs, song_dict2, song_dict8):
     for genre, songs in genre_songs.items():
         targets = []
 
+        # instrumentals are fucking stupid, every city has a different mandatory garage.play file 
         if genre.lower() == "instrumental":
             targets = [
                 os.path.join(PLAY_FOLDER, "garage.play"),
@@ -240,6 +251,7 @@ def update_playlists(new_sdplay_songs, genre_songs, song_dict2, song_dict8):
     # update JSON
     with open(STRTBL2_JSON, "w", encoding="utf-8") as f:
         json.dump(song_dict2, f, ensure_ascii=False, indent=4)
+        
     with open(STRTBL8_JSON, "w", encoding="utf-8") as f:
         json.dump(song_dict8, f, ensure_ascii=False, indent=4)
 
@@ -250,6 +262,7 @@ def convert_json_to_strtbl():
         print(f"{YELLOW}Converting mcstrings02.json → mcstrings02.strtbl{RESET}")
         subprocess.run(["python", os.path.join(TOOLS_FOLDER, "strtbl.py"), "enc", STRTBL2_JSON], check=True)
         os.remove(STRTBL2_JSON)
+
     if os.path.exists(STRTBL8_JSON):
         print(f"{YELLOW}Converting mcstrings08.json → mcstrings08.strtbl{RESET}")
         subprocess.run(["python", os.path.join(TOOLS_FOLDER, "strtbl.py"), "enc", STRTBL8_JSON], check=True)
@@ -270,7 +283,7 @@ def build_rstm_files():
                 continue
 
             if " - " in name:
-                artist, song = name_splitting(name)
+                artist, song = name_splitting(name, False)
                 artist_nospace = re.sub(r"[^\w]", "", artist)
                 song_nospace = re.sub(r"[^\w]", "", song)
                 artist_song = f"{artist_nospace}_{song_nospace}"
@@ -317,7 +330,6 @@ def compile_back():
     subprocess.run(["python", os.path.join(TOOLS_FOLDER, "hash_build.py"), "B", "STREAMS", "STREAMS.DAT", "-a", "MClub"], check=True)
 
 # === 10. Final step ===
-
 def finalStep(song_dict2, song_dict8):
     song_dict2, song_dict8, new_sdplay_songs, genre_songs = process_music_files(song_dict2, song_dict8)
     update_playlists(new_sdplay_songs, genre_songs, song_dict2, song_dict8)
@@ -330,7 +342,7 @@ def finalStep(song_dict2, song_dict8):
 
 def main():
     if os.path.exists(os.path.join(BASE_FOLDER, "ASSETS.DAT")) or os.path.exists(os.path.join(BASE_FOLDER, "STREAMS.DAT")):
-        answer = input(f"{BLUE}Do you want to decode STREAMS.DAT and ASSETS.DAT?{RESET} (Y/N): ").strip().lower()
+        answer = input(f"{BLUE}Do you want to decode STREAMS.DAT or ASSETS.DAT?{RESET} (Y/N): ").strip().lower()
         if answer == "y": 
             decompile_dat_files()
             answer = input(f"{BLUE}The DAT files were decoded.{RESET} Do you want to continue? (Y/N): ").strip().lower()
