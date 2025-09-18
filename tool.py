@@ -16,9 +16,16 @@ STRTBL2_JSON = os.path.join(STRTBL_FOLDER, "mcstrings02.json")
 STRTBL8_FILE = os.path.join(STRTBL_FOLDER, "mcstrings08.strtbl")
 STRTBL8_JSON = os.path.join(STRTBL_FOLDER, "mcstrings08.json")
 
+RED = "\033[31m"
+GREEN = "\033[32m"
+BLUE = "\033[34m"
+YELLOW = "\033[33m"
+RESET = "\033[0m"
+
 if platform.system() == "Windows":
     ffmpeg_bin = os.path.join(TOOLS_FOLDER, "ffmpeg.exe")
 else:
+    if os.geteuid() != 0: input(f"{RED}It's recommended to run this tool as root, otherwise building rstm files might end with a crash due to a permission error.\n{RESET}Do you want to continue regardless? Press enter to continue: ")
     ffmpeg_bin = "ffmpeg"
 
 genre_race_map = {
@@ -38,12 +45,6 @@ LANGUAGES = [
 LANGUAGE_TEXTS = ["by", "de", "par", "von", "di", "by"]
 
 FONT_TEMPLATE = {"name": "smallspace", "scale32": [1.0, 1.0], "scale8": [0, 0], "size": 15}
-
-RED = "\033[31m"
-GREEN = "\033[32m"
-BLUE = "\033[34m"
-YELLOW = "\033[33m"
-RESET = "\033[0m"
 
 # === 1. Decompile existing DAT files ===
 def decompile_dat_files():
