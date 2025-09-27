@@ -72,7 +72,7 @@ def convert_strtbl_to_json():
 
 # === 3. Load existing JSON (songs text entries) <- no the fuck they ain't just that but okay ===
 def load_song_dicts():
-    song_dict2, song_dict8 = {}
+    song_dict2, song_dict8 = {}, {}
 
     if os.path.exists(STRTBL2_JSON):
         with open(STRTBL2_JSON, "r", encoding="utf-8") as f:
