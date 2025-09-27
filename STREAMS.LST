@@ -100,6 +100,7 @@ Speech/Male_048.rsm
 Speech/Male_049.rsm
 Speech/Mechanic/Tokyo/driving_BB_unlock.rsm
 Speech/Mechanic/Tokyo/driving_AR_unlock.rsm
+Music/HipHop/GangstaBoofeatDJPaulJuicyJ_WhereDemDollasAt.rsm
 Music/HipHop/BlackMobGroup_AllDay.rsm
 Speech/Mechanic/Tokyo/driving_LR_unlock.rsm
 Speech/Mechanic/Tokyo/driving_OR_unlock.rsm
@@ -109,6 +110,7 @@ Speech/Narrator/49_Loses_ComeBackLater_3_B.rsm
 Speech/Narrator/49_Loses_ComeBackLater_4_B.rsm
 Speech/Narrator/49_Loses_ComeBackLater_5_B.rsm
 Speech/Narrator/49_Loses_ComeBackLater_6_B.rsm
+Music/HipHop/ChrisBrownfeatLilWayne_GimmeThatRemix.rsm
 Music/Techno/PlumpDJs_BulletTrain.rsm
 RaceStarters/racestart_copstart_Puffy_1.rsm
 Speech/Narrator/7_Warn_Again_Venessa_1.rsm
@@ -247,7 +249,6 @@ Speech/Narrator/52_Loses_GoUpgrade_1_B.rsm
 Speech/Narrator/52_Loses_GoUpgrade_2_B.rsm
 Speech/Narrator/52_Loses_GoUpgrade_3_B.rsm
 Speech/Narrator/52_Loses_GoUpgrade_4_B.rsm
-Music/HipHop/ChrisBrown_GimmeThatRemix.rsm
 Speech/Mechanic/Vince/Player_Loses/Vince_player_loses_1.rsm
 Speech/Mechanic/Vince/Player_Loses/Vince_player_loses_2.rsm
 Speech/Mechanic/Vince/Player_Loses/Vince_player_loses_3.rsm
@@ -279,7 +280,6 @@ Speech/Narrator/N_reinforce_spec_abilitlities.rsm
 RaceStarters/racestart_10_sara_1.rsm
 RaceStarters/racestart_09_Nina_1.rsm
 RaceStarters/racestart_P_06_CB_1.rsm
-Music/HipHop/DianaKing_WineYuWaist.rsm
 RaceStarters/racestart_copstart_Adam_2C_1.rsm
 RaceStarters/racestart_copstart_Adam_3C_1.rsm
 RaceStarters/racestart_copstart_Adam_5C_1.rsm
@@ -289,7 +289,6 @@ Speech/Mechanic/Apone/Encourage_Upgrade/Apone_encourage_upgrade_10.rsm
 Speech/Mechanic/Apone/Encourage_Upgrade/Apone_encourage_upgrade_11.rsm
 Speech/Narrator/7_Warn_Again_Venessa_1_B.rsm
 Speech/Narrator/7_Warn_Again_Venessa_2_B.rsm
-Music/HipHop/Diddy_IllBeMissingYou2014Remaster.rsm
 Speech/Narrator/6_Warn_Venessa_1.rsm
 Speech/Narrator/6_Warn_Venessa_2.rsm
 Speech/Narrator/6_Warn_Venessa_3.rsm
@@ -457,7 +456,6 @@ RaceStarters/racestart_copstart_Puffy_3C_1.rsm
 RaceStarters/racestart_copstart_Puffy_5C_1.rsm
 RaceStarters/racestart_copstart_Puffy_6C_1.rsm
 RaceStarters/racestart_copstart_Puffy_7C_1.rsm
-Music/HipHop/BowWow_LikeYou.rsm
 Music/HipHop/MFresh_RealBig.rsm
 Music/HipHop/TheGame_Higher.rsm
 Speech/Narrator/32_Compliment_Sedan_1_B.rsm
@@ -693,7 +691,6 @@ Speech/Mechanic/Vince/Parts_Reminder/Vince_parts_reminder_2.rsm
 Speech/Mechanic/Vince/Parts_Reminder/Vince_parts_reminder_3.rsm
 Speech/Mechanic/Vince/Parts_Reminder/Vince_parts_reminder_4.rsm
 Music/HipHop/BabyShyne_On.rsm
-Music/HipHop/Ciara_12Step.rsm
 Music/HipHop/BigTymers_Up.rsm
 Speech/Mechanic/Vince/Nice_Car/Vince_nice_car_1.rsm
 Speech/Mechanic/Vince/Nice_Car/Vince_nice_car_2.rsm
@@ -708,6 +705,7 @@ Music/HipHop/JaeMillz_Who.rsm
 Speech/Narrator/32_Compliment_Sedan_1.rsm
 Speech/Narrator/32_Compliment_Sedan_2.rsm
 Speech/Narrator/32_Compliment_Sedan_3.rsm
+Music/Dancehall/DianaKing_WineYuWaist.rsm
 Music/HipHop/50Cent_WindowShopper.rsm
 Engine_Revs/Super_Car1.rsm
 Engine_Revs/Super_Car2.rsm
@@ -771,6 +769,7 @@ Speech/Narrator/31_Compliment_Chopper_2_B.rsm
 Speech/Narrator/31_Compliment_Chopper_3_B.rsm
 Speech/Narrator/N_hotmatch_skully_B.rsm
 Music/Drum_N_Bass/Noisa_Believe.rsm
+Music/HipHop/2ndIINonefeatAMGDJQuik_UpNDaClub.rsm
 Speech/Narrator/23_Warn_Again_Ceasar_1_B.rsm
 Speech/Narrator/23_Warn_Again_Ceasar_2_B.rsm
 Speech/Mechanic/Vince/Upgrade_Reminder/Vince_upgrade_reminder_1.rsm
@@ -863,6 +862,7 @@ Speech/Narrator/N_Generic_for_US_champ_1_B.rsm
 Speech/Narrator/N_Generic_for_US_champ_2_B.rsm
 Speech/Narrator/N_Generic_for_US_champ_3_B.rsm
 Speech/Narrator/N_Generic_for_US_champ_4_B.rsm
+Music/HipHop/E40featTPainKandiGirl_UandDat.rsm
 Engine_Revs/Tuner_Muscle_Car1.rsm
 Engine_Revs/Tuner_Muscle_Car2.rsm
 Music/HipHop/50Cent_InDaClub.rsm
@@ -899,7 +899,6 @@ Music/HipHop/Fabolous_Ghetto.rsm
 Music/Dancehall/BeenieMan_WhoAmI.rsm
 RaceStarters/racestart_TOK_copstart_str00_01.rsm
 Music/HipHop/FatJoe_Safe2Say.rsm
-Music/HipHop/FatJoe_WhatsLuv.rsm
 Music/HipHop/MFresh_FrontEnd.rsm
 Music/HipHop/Nelly_HotInHere.rsm
 Music/HipHop/StatQuo_LikeDat.rsm
@@ -909,6 +908,7 @@ Music/Dancehall/SeanPaul_EyeDehAMiKnee.rsm
 Music/Instrumental/RHK_DeepSouth.rsm
 Music/Instrumental/RHK_Cornbread.rsm
 Music/Instrumental/RHK_SpacedOut.rsm
+Music/HipHop/DiddyfeatFaithEvans112_IllBeMissingYou2014Remaster.rsm
 Music/Win_Lose/dammitman_r8b.rsm
 Music/Win_Lose/headbussa_r8b.rsm
 Music/Win_Lose/fightclub_r8b.rsm
@@ -1473,6 +1473,7 @@ Speech/Narrator/28_Compliment_Vis_Upgrad_14_B.rsm
 Speech/Narrator/28_Compliment_Vis_Upgrad_15_B.rsm
 Speech/Narrator/28_Compliment_Vis_Upgrad_16_B.rsm
 Speech/Narrator/28_Compliment_Vis_Upgrad_17_B.rsm
+Music/HipHop/CiarafeatMissyElliott_12Step.rsm
 Speech/Mechanic/Apone/Car_Diss/Apone_car_diss_1.rsm
 Speech/Mechanic/Apone/Car_Diss/Apone_car_diss_2.rsm
 Speech/Mechanic/Apone/Car_Diss/Apone_car_diss_3.rsm
@@ -1558,7 +1559,6 @@ Speech/Narrator/37_Taunts_General_6_B.rsm
 Speech/Narrator/37_Taunts_General_7_B.rsm
 Speech/Narrator/37_Taunts_General_8_B.rsm
 Speech/Narrator/37_Taunts_General_9_B.rsm
-Music/HipHop/Ciara_Goodies.rsm
 Speech/Mechanic/Vince/Nice_Car/Vince_nice_car_10.rsm
 Music/HipHop/FatJoe_Victim.rsm
 Music/HipHop/Nelly_Dilemma.rsm
@@ -1682,7 +1682,6 @@ Speech/Mechanic/Oscar/Player_Wins/Oscar_player_wins_18.rsm
 Speech/Mechanic/Oscar/Player_Wins/Oscar_player_wins_19.rsm
 Music/HipHop/50Cent_PIMP.rsm
 Music/Rock/Idlewild_ModernWay.rsm
-Music/HipHop/E40_UandDat.rsm
 Speech/Narrator/37_Taunts_General_1.rsm
 Speech/Narrator/37_Taunts_General_2.rsm
 Speech/Narrator/37_Taunts_General_3.rsm
@@ -1705,6 +1704,7 @@ Speech/Mechanic/Apone/Parts_Reminder/Apone_parts_reminder_2.rsm
 Speech/Mechanic/Apone/Parts_Reminder/Apone_parts_reminder_3.rsm
 Speech/Mechanic/Apone/Parts_Reminder/Apone_parts_reminder_4.rsm
 Speech/Mechanic/Apone/Parts_Reminder/Apone_parts_reminder_5.rsm
+Music/HipHop/BowWowfeatCiara_LikeYou.rsm
 Music/HipHop/Fabolous_KeepinItGangsta.rsm
 Music/Drum_N_Bass/DomRoland_CantPunishMe.rsm
 Speech/Narrator/39_Vehicle_Taunts_1_B.rsm
@@ -1775,6 +1775,7 @@ Music/Win_Lose/flash_r8b.rsm
 Music/Win_Lose/pride_r8b.rsm
 Music/Win_Lose/throw_r8b.rsm
 Speech/Narrator/N_by_invitation_only.rsm
+Music/HipHop/USHERfeatLilJonLudacris_Yeah.rsm
 Music/Win_Lose/darkenergysunshine_r8b.rsm
 Speech/Narrator/3_Atlanta_unlocked_1.rsm
 Speech/Narrator/3_Atlanta_unlocked_2.rsm
@@ -1849,6 +1850,7 @@ Speech/Mechanic/Vince/After_Upgrade/Vince_after_upgrade_12.rsm
 Speech/Mechanic/Vince/After_Upgrade/Vince_after_upgrade_13.rsm
 Speech/Narrator/14_Warn_Again_Vito_1_B.rsm
 Music/HipHop/BuddyKlein_LetsGo.rsm
+Music/HipHop/CiarafeatPeteyPablo_Goodies.rsm
 Music/Rock/UnwrittenLaw_FIGHT.rsm
 Speech/Mechanic/Vince/Lose/Vince_lose_10.rsm
 Speech/Mechanic/Vince/Lose/Vince_lose_11.rsm
@@ -2024,14 +2026,11 @@ Speech/Narrator/35_Compliment_Muscle_1.rsm
 Speech/Narrator/35_Compliment_Muscle_2.rsm
 Speech/Narrator/35_Compliment_Muscle_3.rsm
 Music/Rock/Kasabian_ClubFoot.rsm
-Music/HipHop/USHER_Yeah.rsm
 Music/Win_Lose/lightsgodown_r8b.rsm
 Music/Drum_N_Bass/DomRoland_Imagination.rsm
-Music/HipHop/2ndIINone_UpNDaClub.rsm
 Music/HipHop/TrickDaddy_LetsGo.rsm
 Music/Techno/MIA_Denang.rsm
 Music/Techno/MrDe_Throw.rsm
-Music/HipHop/GangstaBoo_WhereDemDollasAt.rsm
 Music/Drum_N_Bass/DeepBlue_HelicopterTune.rsm
 Music/Win_Lose/littlesister_r8b.rsm
 Speech/Narrator/23_Warn_Again_Ceasar_1.rsm
@@ -2164,6 +2163,7 @@ Speech/Mechanic/Vince/After_Upgrade/Vince_after_upgrade_7.rsm
 Speech/Mechanic/Vince/After_Upgrade/Vince_after_upgrade_8.rsm
 Speech/Mechanic/Vince/After_Upgrade/Vince_after_upgrade_9.rsm
 Music/Techno/Martian_TobaccoTies.rsm
+Music/HipHop/FatJoefeatJaRuleAshanti_WhatsLuv.rsm
 RaceStarters/racestart_copstart_Adam_02_2C_1.rsm
 RaceStarters/racestart_copstart_Adam_02_3C_1.rsm
 RaceStarters/racestart_copstart_Adam_02_5C_1.rsm
@@ -2236,7 +2236,6 @@ Music/HipHop/Trina_PutItOnTop.rsm
 Music/Win_Lose/robbinhoodz_r8b.rsm
 Music/HipHop/TheGame_HateItOrLoveIt.rsm
 Music/Win_Lose/storieswithunhappy_r8b.rsm
-Music/HipHop/BeenieMan_WineYuhWaist.rsm
 Music/Win_Lose/noteveryone_r8b.rsm
 Music/HipHop/Apathy_DriveItLikeIStoleIt.rsm
 Speech/Narrator/N_Generic_for_hookman_1.rsm
