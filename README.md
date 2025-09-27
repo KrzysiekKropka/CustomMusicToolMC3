@@ -20,7 +20,7 @@
     If using .DAT files, run the script first to decode them.
 
 2.  Place new music files in STREAMS/Music/[genre] with the format [Artist] - [Song].[ext] 
-    If there is (feat.) or (ft.) in the song's name, it will automatically be added to [Artist]
+    If there is (feat.) or (ft.) in [Song], it will automatically be added to [Artist]
 
 3.  Run the script if you haven't already.
 
