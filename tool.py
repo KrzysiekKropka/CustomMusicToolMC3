@@ -85,16 +85,14 @@ def load_song_dicts():
     return song_dict2, song_dict8
 
 # === A name splitting helper function, also takes (feat.) from song titles and adds it to artist ===
-def name_splitting(name, toAppend = True):
+def name_splitting(name):
     artist, song = name.split(' - ', 1)
 
     feat_match = re.search(r"\((feat\.|ft\.)\s*([^)]+)\)", song, flags=re.IGNORECASE)
 
     if feat_match:
-        # Append feat. to artist name
-        if toAppend:
-            featured = feat_match.group(2).strip()
-            artist = f"{artist} feat. {featured}"
+        featured = feat_match.group(2).strip()
+        artist = f"{artist} feat. {featured}"
         # Remove the (feat. ...) from the song title
         song = re.sub(r"\((feat\.|ft\.)\s*[^)]+\)", "", song, flags=re.IGNORECASE).strip()
 
@@ -118,7 +116,7 @@ def list_new_songs():
             name, ext = os.path.splitext(filename)
             if ' - ' in name:
                 print(f"{GREEN}Found a song in {genre}: {filename}", end=". ")
-                artist, song = name_splitting(name, True)
+                artist, song = name_splitting(name)
                 print(f"{RESET}Will be {song} by {artist}")
                 number += 1
             else:
@@ -152,7 +150,7 @@ def process_music_files(song_dict2, song_dict8):
             if ' - ' not in name:
                 continue
 
-            artist, song = name_splitting(name, True)
+            artist, song = name_splitting(name)
 
             # Names with no spaces
             artist_nospace = re.sub(r"[^\w]", "", artist) 
@@ -284,7 +282,7 @@ def build_rstm_files():
                 continue
 
             if " - " in name:
-                artist, song = name_splitting(name, False)
+                artist, song = name_splitting(name)
                 artist_nospace = re.sub(r"[^\w]", "", artist)
                 song_nospace = re.sub(r"[^\w]", "", song)
                 artist_song = f"{artist_nospace}_{song_nospace}"
