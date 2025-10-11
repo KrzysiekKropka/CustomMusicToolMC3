@@ -20,6 +20,7 @@
     If using .DAT files, run the script first to decode them.
 
 2.  Place new music files in STREAMS/Music/[genre] with the format [Artist] - [Song].[ext] 
+    The files must be in some normal audio format, like WAV, FLAC or MP3. RSMs will be ignored.
     If there is (feat.) or (ft.) in [Song], it will automatically be added to [Artist]
 
 3.  Run the script if you haven't already.
